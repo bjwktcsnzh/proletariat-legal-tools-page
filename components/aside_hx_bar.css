@@ -1,0 +1,50 @@
+aside {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    display: block;
+    overflow: scroll;
+    margin: 0px 0px 40px 0px;
+}
+
+aside nav {
+    margin: 10px 5px 20px 5px;
+}
+
+nav a{
+    color: rgb(37, 58, 134);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: rgb(37, 58, 134);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+aside p {
+    overflow:auto;
+    margin: 10px 5px 0px 5px;
+}
+
+aside p a{
+    color: black;
+    text-decoration: none;
+}
+
+aside p a:hover{
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+aside p b{
+    color: black;
+    text-decoration: none;
+}
+
+article {
+    margin-left: 220px;
+}
