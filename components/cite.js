@@ -45,7 +45,7 @@
 
             if (parent_iframe) {
                 function _update_parent_iframe_height(parent_iframe) {
-                    parent_iframe.height = document.body.scrollHeight + 50
+                    parent_iframe.height = document.body.scrollHeight
                 }
 
                 setInterval(() => _update_parent_iframe_height(parent_iframe), 100)
@@ -124,7 +124,16 @@
 
                 parentNode.append(
                     ''
-                    + `<iframe class="cited-iframe" src="${iframe_src}"  name="${iframe_name}" frameborder="0" width="100%" style="display:none">` //  
+                    + `
+                    <iframe 
+                      class="cited-iframe" 
+                      src="${iframe_src}"  
+                      name="${iframe_name}" 
+                      frameborder="0" 
+                      width="100%" 
+                      scrolling="no" 
+                      style="display:none"
+                    >` //  
                     + '</iframe>'
                 )
 
