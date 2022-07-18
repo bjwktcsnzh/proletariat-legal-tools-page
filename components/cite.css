@@ -1,26 +1,19 @@
 cite {
-    background-color: rgb(195, 248, 255);
+    background-color: rgba(195, 248, 255, 0.8);
 }
+
 
 cite:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.cited-scope {
+.cited {
     background-color: rgba(0, 200, 255, 0.1);
     margin: 10px 15px 10px 15px;
     padding: 1px 15px 10px 15px;
 }
 
-/* .cited-scope-headline {
-    background-color: rgb(135, 233, 255);
-    width: 100%;
-    height: 5px
+.cited-iframe {
+    border: 5px solid rgba(57, 189, 226, 0.547);
 }
-
-.cited-scope-tailline {
-    background-color: rgb(135, 233, 255);
-    width: 100%;
-    height: 5px
-} */

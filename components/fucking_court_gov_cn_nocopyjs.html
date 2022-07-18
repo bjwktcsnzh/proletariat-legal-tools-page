@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>解决最高人民法院官网无法复制的问题</title>
+    <meta http-equiv="content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="../common.css">
+    <link rel="stylesheet" type="text/css" href="../dev/dev.css">
+    <link rel="stylesheet" type="text/css" href="../components/cite.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <style>
+        #main {
+            border: 3px solid rgb(255, 216, 172);
+            border-radius: 20px;
+            padding: 10px 20px 10px 20px;
+            display:none
+        }
+
+        #hide_button {
+            width: 30px;
+            height: 20px;
+            background-color: rgb(255, 216, 172);
+            text-align: center;
+            font-size: 20px;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body >
+    <div id="hide_button">
+        ...
+    </div>
+    <div id="main">
+        <div>
+            <p>这个网站很恶心，故意禁用了text select和按下F12等按键。 </p>
+            <p>罪魁祸首是 http://gongbao.court.gov.cn/Content/js/nocopy.js 这个鸟文件（甚至乱码，里面还有复制来的作者qq、网站）</p>
+            <p>解决办法: 进入网站前，先按F12打开控制台。进入网站后，在console/控制台中输入这段代码：</p>
+    
+            <pre style="width:80%;border:1px solid saddlebrown;"><code class="language-js">
+    document.onkeyup = 
+    document.onselectstart = 
+    document.ondragstart = 
+    document.oncontextmenu = 
+    document.oncopy = 
+    document.onmousedown = 
+    document.onkeydown = function (){ 
+        console.log("fuck programmer") 
+    }
+    
+    $("style[type='text/css']").each(function(idx,item){ 
+        if(item.innerHTML.indexOf("select:none") &gt;= 0 ){ 
+            item.innerHTML="/* fuck programmer */" 
+        }  
+    })
+        </code> </pre>
+        </div>
+        <div>
+            <p>
+                他还很贴心的给你一个大大滴警告： http://gongbao.court.gov.cn/SinglePage.html?result=statement
+            </p>
+            <p>
+                完全就是把《中华人民共和国著作权法》第五条当屁。
+            </p>
+        </div>
+    </div>
+
+    <script src="../jquery-3.6.0.js"></script>
+    <script src="../common.js"></script>
+    <script src="../dev/dev.js"></script>
+    <script src="../components/cite.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+
+        function _update_parent_iframe_height(parent_iframe) {
+            parent_iframe.height = document.body.scrollHeight + 50
+        }
+
+        if (parent) {
+            parent.$("iframe").each(function (idx, iframe) {
+                if (iframe.src.indexOf('fucking_court_gov_cn_nocopyjs.html') >= 0) {
+                    setInterval(() => _update_parent_iframe_height(iframe), 100)
+                }
+            })
+        }
+
+        $("#hide_button").click(function (e) {
+            function set_display(value){
+                $("#main").css("display",value)
+            }
+
+            if($("#main").css("display")=="none"){
+                set_display("block")
+            }else{
+                set_display("none")
+            }
+        })
+    </script>
+</body>
+
+</html>

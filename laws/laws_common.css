@@ -1,0 +1,21 @@
+.supplements {
+    border: 5px solid rgb(179, 206, 214);
+    margin : 10px 0px 3px 0px;
+    padding: 3px 20px 3px 20px;
+}
+
+.warning {
+    border: 5px solid rgb(255, 97, 97);
+    margin : 10px 0px 3px 0px;
+    padding: 3px 20px 3px 20px;
+}
+
+cite .warning-cite {
+    border-bottom: 4px solid  rgb(255, 97, 97);
+}
+
+.about {
+    border: 5px solid rgb(219, 141, 223);
+    margin : 10px 0px 3px 0px;
+    padding: 3px 20px 3px 20px;
+}
