@@ -82,7 +82,7 @@
                 | <a href="https://gitee.com/tcsn_site/proletariat-legal-tools-page" target="_blank">Gitee</a>
             </p>
         </div>
-        <p id="version">v1.1.0</p><!-- todo -->
+        <p id="version"></p><!-- todo -->
 
         <div class="items_scope visit-when-dev">
             <h2>开发者工具</h2>
@@ -102,7 +102,10 @@
     <script src="./dev/dev.js"></script>
     <!-- get version.txt insert to #version label-->
     <script>
-        
+        $.get("version.txt",(data)=>{
+            let d = data.trim();
+            $("#version").text("版本: "+d)
+        })
     </script>
 </body>
 
