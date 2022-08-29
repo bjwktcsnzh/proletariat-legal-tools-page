@@ -4,6 +4,7 @@
 <head>
     <title>法律工具页</title>
     <meta http-equiv="content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
     <link rel="stylesheet" type="text/css" href="./common.css">
     <link rel="stylesheet" type="text/css" href="./dev/dev.css">
     <style>
@@ -30,7 +31,7 @@
 </head>
 
 <body>
-    <div id="root">
+    <article id="root">
         <h1>法律工具页</h1>
         <hr />
         <div class="items_scope">
@@ -71,13 +72,16 @@
                     劳动争议调解仲裁法
                 </a>
             </p>
+
+        </div>
+
+        <div class="items_scope">
+            <h2>资源下载</h2>
             <p>
                 <a target="_blank" href="./resources/仲裁申请书和证据目录示例.zip">
                     仲裁申请书和证据目录示例
                 </a>
             </p>
-            
-
         </div>
 
         <div class="items_scope">
@@ -100,16 +104,16 @@
             </div>
 
         </div>
-    </div>
+    </article>
 
     <script src="./jquery-3.6.0.js"></script>
     <script src="./common.js"></script>
     <script src="./dev/dev.js"></script>
     <!-- get version.txt insert to #version label-->
     <script>
-        $.get("version.txt",(data)=>{
+        $.get("version.txt", (data) => {
             let d = data.trim();
-            $("#version").text("版本: "+d)
+            $("#version").text("版本: " + d)
         })
     </script>
 </body>
