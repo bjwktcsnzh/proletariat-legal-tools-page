@@ -142,7 +142,7 @@
             </div>
             <div class="supplements">
                 <p>还可以进一步收集如下证据:</p>
-                <ol>
+                <ol id="item_10_list_of_evidence">
                     <li>应聘登记表、入职登记表、录用通知书、面试通知短信等;</li>
                     <li>
                         工作服、出入证、厂牌、工作证、技术认定证书、专业证书年检记录
@@ -190,6 +190,7 @@
                         信用卡账单邮寄地址为单位。
                     </li>
                 </ol>
+                <button id="item_10_list_of_evidence_copy_button">带标号复制</button>
             </div>
             <div class="supplements">
                 <p>
@@ -696,8 +697,8 @@
                 劳动者在试用期内提前三日通知用人单位，可以解除劳动合同。</p>
             <div class="supplements">
                 <p>
-                    一般实践中，我们通常使用EMS邮寄一封《解除劳动关系通知书》/
-                    《被迫解除劳动关系通知书》给用人单位。
+                    一般实践中，我们通常使用EMS邮寄一封
+                    《解除劳动关系通知书》/ 《被迫解除劳动关系通知书》给用人单位。
                     邮件到达/拒收的时间即为我们履行通知义务的时间。
                 </p>
                 <p>
@@ -722,6 +723,28 @@
             <p id="item_38_underworld">用人单位以暴力、威胁或者非法限制人身自由的手段强迫劳动者劳动的，
                 或者用人单位违章指挥、强令冒险作业危及劳动者人身安全的，
                 劳动者可以立即解除劳动合同，不需事先告知用人单位。</p>
+            <div class="supplements">
+                <p>
+                    我们写一封《被迫解除劳动关系通知书》给公司，
+                    自己留一份通知书的复印件，然后把原件以EMS邮寄的方式寄给公司，
+                    要在寄单上物品内容一栏注明是“解除劳动关系通知书”保留好相关票据。
+                </p>
+                <p>
+                    通知书写明是依照《劳动合同法》第三十八条规定，
+                    因用人单位未及时足额发放劳动报酬被迫解除劳动关系，
+                    要求公司支付N倍月工资作为被迫解除劳动关系的经济补偿金并补齐未足额发放的工资，
+                    然后附上签名和日期。
+                </p>
+                <p>
+                    等到公司签收/拒签你的通知书后，你的通知任务已经完成，无需公司批准与否，
+                    你们的劳动关系就已经单方面解除了。
+                    在寄到之前需要先正常打卡上班，以免留下旷工等对你不利的证据。
+                </p>
+                <p style="color:gray">
+                    以上参考自回答【贴吧1649-肥宅快乐不思苏维埃-降薪】，
+                    原帖: https://tieba.baidu.com/p/8074411649
+                </p>
+            </div>
             <div class="about">
                 <p>根据<cite dom-id="item_46">第四十六条</cite>，
                     以此条解除劳动合同，用人单位需要<b>支付补偿金</b>。</p>
@@ -1353,6 +1376,15 @@
     <script src="../components/cite.js"></script>
     <script src="../components/aside_common.js"></script>
     <script src="../components/aside_hx_bar.js"></script>
+    <script>
+        $("#item_10_list_of_evidence_copy_button").click(function (e) {
+            let text = ""
+            let children = $("#item_10_list_of_evidence").children().each((idx, item) => {
+                text += ((idx + 1) + ". " + item.innerText + "\n")
+            })
+            navigator.clipboard.writeText(text);
+        })
+    </script>
 </body>
 
 </html>
