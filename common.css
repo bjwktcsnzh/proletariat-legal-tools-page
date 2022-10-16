@@ -4,10 +4,74 @@ body {
 }
 
 article {
-    padding : 0px 15px 0px 15px;
+    padding: 0px 15px 0px 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+span.ripple {
+    position: absolute;
+    /* The absolute position we mentioned earlier */
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+input,
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: #0f0f0f;
+    background-color: #ade6ff;
+    transition: border-color 400ms;
+    box-shadow: 0 2px 0.3em rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    border-color: #396cd8;
 }
 
 
-
-
-
+input {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: #0f0f0f;
+    background-color: #ffffff;
+    transition: border-color 400ms;
+    box-shadow: 0 2px 0.3em rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}

@@ -11,14 +11,12 @@ aside {
 }
 
 #aside-hide-button {
-    padding: 5px;
-    background-color: rgb(141, 141, 255);
+    padding: 6px;
     position: fixed;
     right: 20px;
     top: 20px;
-    font-weight: bolder;
-    color:whitesmoke;
     z-index: 1000;
+    cursor: pointer;
 }
 
 aside.hide {

@@ -18,8 +18,7 @@
         }
 
         #hide_button {
-            width: 30px;
-            height: 20px;
+            padding: 0px 2px 0px 2px;
             background-color: rgb(255, 216, 172);
             text-align: center;
             font-size: 20px;
@@ -29,13 +28,12 @@
 </head>
 
 <body >
-    <div id="hide_button">
+    <button id="hide_button">
         ...
-    </div>
+    </button>
     <div id="main">
         <div>
-            <p>这个网站很恶心，故意禁用了text select和按下F12等按键。 </p>
-            <p>罪魁祸首是 http://gongbao.court.gov.cn/Content/js/nocopy.js 这个鸟文件（甚至乱码，里面还有复制来的作者qq、网站）</p>
+            <p>这个网站故意禁用了text select和按下F12等按键。 </p>
             <p>解决办法: 进入网站前，先按F12打开控制台。进入网站后，在console/控制台中输入这段代码：</p>
     
             <pre style="width:80%;border:1px solid saddlebrown;"><code class="language-js">
@@ -56,21 +54,12 @@
     })
         </code> </pre>
         </div>
-        <div>
-            <p>
-                他还很贴心的给你一个大大滴警告： http://gongbao.court.gov.cn/SinglePage.html?result=statement
-            </p>
-            <p>
-                完全就是把《中华人民共和国著作权法》第五条当屁。
-            </p>
-        </div>
     </div>
 
-    <script src="../jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="../common.js"></script>
     <script src="../dev/dev.js"></script>
     <script src="../components/cite.js"></script>
-
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <script>
         hljs.highlightAll();

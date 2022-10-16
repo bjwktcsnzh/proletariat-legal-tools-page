@@ -20,7 +20,7 @@ function __aside_is_hided() {
 
 (function () {
     if (!_common.inIframe()) {
-        $("body").append('<div id="aside-hide-button"></div>')
+        $("body").append('<button id="aside-hide-button"></button>')
     }
     let isHided = __aside_is_hided()
     $("#aside-hide-button").text(isHided ? "显示侧边栏" : "隐藏侧边栏")

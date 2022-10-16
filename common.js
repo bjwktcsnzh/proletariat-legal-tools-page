@@ -31,3 +31,4 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+
