@@ -31,8 +31,13 @@
 </head>
 
 <body>
-    <article id="root">
+    <div id="root">
         <h1>法律工具页</h1>
+        <p>
+            <a target="_blank" href="https://www.yuque.com/ag1uqw">
+                五年四班法务部
+            </a>
+        </p>
         <hr />
         <div class="items_scope">
             <h2>法条速查</h2>
@@ -82,7 +87,7 @@
                     最高人民法院关于审理劳动争议案件适用法律问题的解释（一）
                 </a>
             </p>
-            
+
         </div>
 
         <div class="items_scope">
@@ -108,25 +113,22 @@
             <p><a href="./laws/new_article_template.html">法律页面模板</a></p>
             <div style="display: inline-block">
                 <h3>正在开发中</h3>
-                <p>
-                    <a href="./tools/robot_of__lao_dong_jiu_fen_zi_xun.html">劳动纠纷咨询机器</a>
-                </p>
             </div>
 
         </div>
-    </article>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="./common.js"></script>
-    <script src="./dev/dev.js"></script>
-    <!-- get version.txt insert to #version label-->
-    <script>
-        $.get("version.txt", (data) => {
-            let d = data.trim();
-            $("#version").text("版本: " + d)
-        })
-    </script>
-    <script src="./common_at_last.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="./common.js"></script>
+        <script src="./dev/dev.js"></script>
+        <!-- get version.txt insert to #version label-->
+        <script>
+            $.get("version.txt", (data) => {
+                let d = data.trim();
+                $("#version").text("版本: " + d)
+            })
+        </script>
+        <script src="./common_at_last.js"></script>
+    </div>
 </body>
 
 </html>
