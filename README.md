@@ -1,6 +1,6 @@
 # proletariat-legal-tools-page
 
-无产阶级法律工具页
+《劳动法》法律工具页
 
 要不要试试？ 
 
